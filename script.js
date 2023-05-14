@@ -521,5 +521,5 @@ function exercicioVinteCinco() {
     classificacao = "neutro";
   }
 
-  document.write(`O pH da solução é ${pH.toFixed(2)} e é classificado como ${classificacao}.`);
+  document.write("O pH da solução é " + pH.toFixed(2) + " e é classificado como " + classificacao);
 };
