@@ -38,9 +38,59 @@ function exercicioQuatro() {
   document.write("60% desse valor é " + valorPorcentagem);
 };
 // 5) Perguntar o nome e o valor de um produto e apresentar o novo valor reajustado em 14,7%.
+const botao5 = document.querySelector('#exercicioCinco');
+botao5.addEventListener('click', exercicioCinco);
+
+function exercicioCinco() {
+  var nome = prompt("Qual seu nome");
+  var valor = prompt("Valor do produto");
+  valor = valor * 1.147
+  document.write("O novo valor do produto " + nome + " é de " + valor);
+};
 // 6) Calcular e apresentar o volume de um cone. Fórmula: VCN = ((3.1416 * R²) / 3) * H.
+const botao6 = document.querySelector('#exercicioSeis');
+botao6.addEventListener('click', exercicioSeis);
+
+function exercicioSeis() {
+  var raio = prompt("Informe o valor do raio:");
+  var altura = prompt("Informe o valor da altura:");
+
+  var volumeCone = (3.1416 * (raio * raio) / 3) * altura;
+  document.write("O volume do cone é de: " + volumeCone.toFixed(1));
+}
 // 7) Solicite um valor inteiro e apresente a mensagem: NÚMERO PAR ou NÚMERO ÍMPAR.
-// 8) Solicite 3 notas, calcule a média e apresente se o aluno está APROVADO ou REPROVADO, considerando média mínima 6,0 para aprovação. 
+const botao7 = document.querySelector('#exercicioSete');
+botao7.addEventListener('click', exercicioSete);
+
+function exercicioSete() {
+  var valorInteiro = prompt("Informe um valor inteiro");
+  if (valorInteiro % 2 == 0){
+    document.write("O valor " + valorInteiro + " inserido é PAR")
+    } else if (valorInteiro % 2 == 1){
+    document.write("O valor " + valorInteiro + " inserido é ÍMPAR")
+    } else {
+    document.write("O valor " + valorInteiro + " inserido é INVÁLIDO")
+  }
+}
+// 8) Solicite 3 notas, calcule a média e apresente se o aluno está APROVADO ou REPROVADO, considerando média mínima 6,0 para aprovação.
+const botao8 = document.querySelector('#exercicioOito');
+botao8.addEventListener('click', exercicioOito);
+
+function exercicioOito() {
+  var nota1 = prompt("Informe a primeira nota:");
+  var nota2 = prompt("Informe a segunda nota:");
+  var nota3 = prompt("Informe a terceira nota:");
+  var media = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) / 3;
+  if (media >= 6) {
+    document.write("A média do aluno é " + media + "<br>");
+    document.write("Aluno aprovado!");
+  } else if (media < 6){
+    document.write("A média do aluno é " + media);
+    document.write("Aluno reprovado!");
+  } else {
+    document.write("Algo deu errado! Tente novamente!");
+  }  
+}
 // 9) Solicitar o nome, idade, sexo e salário de uma pessoa. Posteriormente, faça o reajuste do salário de acordo com as condições abaixo e posteriormente apresente o novo salário (com reajuste):
 // - Acima de 50 anos, reajuste de 35%
 // - Mulheres com até 24 anos, reajuste de 18%
@@ -48,8 +98,74 @@ function exercicioQuatro() {
 // - Mulheres entre 25 e 50 anos, reajuste de 23%
 // - Homens entre 28e 38 anos, reajuste de 21%
 // - Homens entre 39 e 50 anos, reajuste de 23%
+const botao9 = document.querySelector('#exercicioNove');
+botao9.addEventListener('click', exercicioNove);
+
+function exercicioNove() {
+  var nome = prompt("Informe seu nome:");
+  var idade = prompt("Informe sua idade:");
+  var sexo = prompt("Informe seu sexo (F/M):");
+  var salario = prompt("Informe seu salário:");
+
+  if (sexo == 'F' || sexo == 'f' && idade <= 24){
+    salario = parseInt(salario * 1.18);
+    document.write(nome + " seu novo salário é de: " + salario.toFixed(2));
+  }
+  else if (sexo == 'M' || sexo == 'm' && idade <= 27){
+    salario = parseInt(salario * 1.175);
+    document.write(nome + " seu novo salário é de: " + salario.toFixed(2));
+  }
+  else if (sexo == 'F' || sexo == 'f' && idade >= 25 && idade <= 50){
+    salario = parseInt(salario * 1.23);
+    document.write(nome + " seu novo salário é de: " + salario.toFixed(2));
+  }
+  else if (sexo == 'M' || sexo == 'm' && idade >= 28 && idade <= 38){
+    salario = parseInt(salario * 1.21);
+    document.write(nome + " seu novo salário é de: " + salario.toFixed(2));
+  }
+  else if (sexo == 'M' || sexo == 'm' && idade >= 39 && idade <= 50){
+    salario = parseInt(salario * 1.23);
+    document.write(nome + " seu novo salário é de: " + salario.toFixed(2));
+  }
+  else if (idade > 50){
+    salario = parseInt(salario * 1.35);
+    document.write(nome + " seu novo salário é de: " + salario.toFixed(2));
+  }
+}
 // 10) Solicite dois valores e apresente a multiplicação de um pelo outro utilizando apenas um laço de repetição (sem o operador aritmético de multiplicação).
+const botao10 = document.querySelector('#exercicioDez');
+botao10.addEventListener('click', exercicioDez);
+
+function exercicioDez() {
+  var valor1 = prompt("Informe um valor:");
+  var valor2 = prompt("Informe o valor que irá multiplicar");
+  var resultado = 0;
+
+  for (var count = 1; count <= valor2; count++) {
+    resultado += parseInt(valor1);
+  }
+  document.write(valor1 + " x " + valor2 + " = " + resultado);
+}
 // 11) Solicite um valor inteiro e apresente se o mesmo é ou não um número PRIMO.
+const botao11 = document.querySelector('#exercicioOnze');
+botao11.addEventListener('click', exercicioOnze);
+
+function exercicioOnze() {
+  var valorInteiro = prompt("Informe um valor inteiro:");
+  if (parseInt(valorInteiro) == 2){
+    document.write(valorInteiro + " É PRIMO");
+  } else if (parseInt(valorInteiro) / 1 == parseInt(valorInteiro)) {
+    if (parseInt(valorInteiro) / parseInt(valorInteiro) == 1)
+    {
+      if(parseInt(valorInteiro) % 2 == 0)
+      {
+        document.write(valorInteiro + " NÃO É PRIMO");
+      } else {
+        document.write(valorInteiro + " É PRIMO");
+      }
+    }
+  }
+}
 // 12) Solicite dois valores inteiros (o segundo deverá ser maior que o primeiro) e apresente todos os números PARES do intervalo (inclusive eles mesmos) utilizando o laço FOR.
 // 13) Solicite dois valores inteiros (o segundo deverá ser maior que o primeiro) e apresente todos os números PARES do intervalo (inclusive eles mesmos) utilizando o laço WHILE.
 // 14) Solicite dois valores inteiros (o segundo deverá ser maior que o primeiro) e apresente todos os números PARES do intervalo (inclusive eles mesmos) utilizando o laço DO - WHILE.
