@@ -2,23 +2,41 @@
 // ​1) Apresente a mensagem “Testando o Javascript”.
 const botao = document.querySelector('#exercicioUm');
 botao.addEventListener('click', exercicioUm);
-function exercicioUm () {
-    document.write("Testando o Javascript");
+
+function exercicioUm() {
+  document.write("Testando o JavaScript");
 };
 // 2) Apresente as mensagens “Exercitando algoritmos II” e também “com Javascript” (uma abaixo da outra).
-document.write("Exercitando algoritmos II"<br> "com Javascript");
+const botao2 = document.querySelector('#exercicioDois');
+botao2.addEventListener('click', exercicioDois);
+
+function exercicioDois() {
+  document.write("Exercitando algoritmos II<br>com JavaScript");
+};
 // 3) Ler uma variável e apresentar seu triplo.
-do {
+const botao3 = document.querySelector('#exercicioTres');
+botao3.addEventListener('click', exercicioTres);
+
+function exercicioTres() {
+  do {
     var numeroQualquer = prompt("Insira um número qualquer");
-}
- while (numeroQualquer == "" && numeroQualquer == null);
- document.write("O triplo de " + numeroQualquer + " é " + numeroQualquer * 3);
+  } while (numeroQualquer == "" || numeroQualquer == null);
+  
+  var triplo = numeroQualquer * 3;
+  document.write("O triplo de " + numeroQualquer + " é " + triplo);
+};
 // 4) Ler uma variável e apresentar 60% da mesma.
-do {
+const botao4 = document.querySelector('#exercicioQuatro');
+botao4.addEventListener('click', exercicioQuatro);
+
+function exercicioQuatro() {
+  do {
     var numeroQualquerPorcentagem = prompt("Insira um número qualquer");
-}
-while (numeroQualquerPorcentagem == "" && numeroQualquerPorcentagem == null);
-document.write("60% desse valor é " + numeroQualquerPorcentagem / 0.40);
+  } while (numeroQualquerPorcentagem == "" || numeroQualquerPorcentagem == null);
+
+  var valorPorcentagem = numeroQualquerPorcentagem * 0.6;
+  document.write("60% desse valor é " + valorPorcentagem);
+};
 // 5) Perguntar o nome e o valor de um produto e apresentar o novo valor reajustado em 14,7%.
 // 6) Calcular e apresentar o volume de um cone. Fórmula: VCN = ((3.1416 * R²) / 3) * H.
 // 7) Solicite um valor inteiro e apresente a mensagem: NÚMERO PAR ou NÚMERO ÍMPAR.
