@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+#titulo {
+    text-align: center;
+}
+
+#corpo {
+    text-align: center;
+}
+
+#mensagem {
+    text-align: center;
+    padding: 20px;
+}
+
+#mensagem-erro {
+    color: rgb(255, 21, 21);
+    text-align: center;
+}
+
+#mensagem-dividida {
+    text-align: center;
+    padding: 20px;
+}
+
+#mensagem-maiuscula {
+    text-align: center;
+    padding: 20px;
+}
+
+#mensagem-invertida {
+    text-align: center;
+    padding: 20px;
+}
+
+#mensagem-matriz {
+    text-align: center;
+    padding: 20px;
+}
+
+#contadora {
+    text-align: center;
+    padding: 20px;
+}
+
+#botao:hover {
+    cursor: pointer;
+}
