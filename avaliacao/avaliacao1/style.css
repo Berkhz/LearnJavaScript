@@ -1,11 +1,56 @@
-* {
-    background-color: black;
-    color: white;
-    font-family: sans-serif;
+body {
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  background-size: 200% auto;
+  animation: animacao-background 10s ease infinite;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes animacao-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1 {
-    text-align: center;
-    font-size: 24px;
-    padding: 40px;
+  text-align: center;
+  font-size: 24px;
+  padding: 40px;
+}
+
+#arquivoTexto {
+  text-align: center;
+  margin-top: 20px;
+}
+  
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+  
+.custom-button:hover {
+  background-color: #27ae60;
+}
+  
+.custom-button:active {
+  background-color: #ae2727;
+}
+  
+input[type="file"] {
+    display: none;
 }
